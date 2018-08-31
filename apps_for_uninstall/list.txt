@@ -1,0 +1,10 @@
+package:io.appium.android.ime
+package:com.tencent.news
+package:com.sand.airdroid
+package:com.netease.qa.emmagee
+package:com.netease.newsreader.activity
+package:com.shazam.android
+package:com.document.pdf.scanner.docscan
+package:com.facebook.katana
+package:com.google.android.instantapps.supervisor
+package:io.appium.unlock
