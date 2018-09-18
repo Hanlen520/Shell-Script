@@ -39,3 +39,6 @@ com.qrcode.barcode.reader.scanner.free
 com.fast.messages.social.messenger.free
 dacall.overseas.free.call.wifi.bangladesh
 com.predict.horoscope.daily.zodiac.sign
+abc.apple.emoji.theme.gif.keyboard
+walking.pedometer.fit.stepcounter
+man.fit.workout.routine.muscle.training
