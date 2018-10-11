@@ -1,10 +1,2 @@
-package:io.appium.android.ime
-package:com.tencent.news
-package:com.sand.airdroid
-package:com.netease.qa.emmagee
-package:com.netease.newsreader.activity
-package:com.shazam.android
-package:com.facebook.katana
-package:hifit.workout.butt.fitness.weightloss
+package:com.cootek.smartinputv5
 package:com.google.android.instantapps.supervisor
-package:io.appium.unlock

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-adb pull /sdcard/Pictures/Screenshots /Users/a140/Desktop
+adb pull /sdcard/Pictures/Screenshots /Users/shengjie.liu/Desktop
