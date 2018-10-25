@@ -18,11 +18,11 @@ userid=$(adb shell dumpsys package $packagename | grep userId= | sed 's/ //g' | 
 echo "uid = $userid"
 
 # create dir output
-mkdir output
+mkdir output_memory
 # get current path
 WORKSPACE=`pwd`
 # put results to OUTPUT
-OUTPUT=${WORKSPACE}/output
+OUTPUT=${WORKSPACE}/output_memory
 
 # launch application
 adb shell am start -n $component
