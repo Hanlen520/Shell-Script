@@ -7,5 +7,5 @@ echo -n "Please enter the app name:"
 read app_name
 echo -n "Please enter the priority of log:"
 read priority
-adb logcat -d -v time "$package_name:$priority" > /Users/a140/Desktop/logg/$app_name$DATE.log
+adb logcat -d -v time "$package_name:$priority" > /Users/shengjie.liu/Desktop/logg/$app_name$DATE.log
 adb logcat -c
