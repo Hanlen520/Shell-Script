@@ -1,0 +1,59 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 511523 Realtime: 511523
+
+** MEMINFO in pid 7860 [com.color.phone.flash.caller.screen] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    30948    30804        0        0    53248    46751     6496
+  Dalvik Heap     4542     4528        0        0     8430     4215     4215
+ Dalvik Other     4048     4048        0        0                           
+        Stack       52       52        0        0                           
+       Ashmem      160      128        0        0                           
+      Gfx dev     5416     5416        0        0                           
+    Other dev       36        0       36        0                           
+     .so mmap     3323      368      160       12                           
+    .jar mmap        0        0        0        0                           
+    .apk mmap    18201       72    17760        0                           
+    .ttf mmap       41        0        0        0                           
+    .dex mmap    15654       12    13416        0                           
+    .oat mmap     2558        0      344        0                           
+    .art mmap     1763     1320      168        0                           
+   Other mmap      693        8      632        0                           
+      Unknown     4329     4328        0        0                           
+        TOTAL    91776    51084    32516       12    61678    50966    10711
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6016
+         Native Heap:    30804
+                Code:    32132
+               Stack:       52
+            Graphics:     5416
+       Private Other:     9180
+              System:     8176
+ 
+               TOTAL:    91776       TOTAL SWAP PSS:       12
+ 
+ Objects
+               Views:       11         ViewRootImpl:        0
+         AppContexts:        7           Activities:        0
+              Assets:        5        AssetManagers:        2
+       Local Binders:       77        Proxy Binders:       38
+       Parcel memory:       35         Parcel count:      142
+    Death Recipients:        3      OpenSSL Sockets:       10
+            WebViews:        3
+ 
+ SQL
+         MEMORY_USED:     1224
+  PAGECACHE_OVERFLOW:      318          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             89        24/34/7  /data/user/0/com.color.phone.flash.caller.screen/databases/ezalter.db
+         4       28             98       19/45/14  /data/user/0/com.color.phone.flash.caller.screen/databases/ararat
+         4      108            102    1272/225/25  /data/user/0/com.color.phone.flash.caller.screen/databases/google_app_measurement.db
+         4       20             54      1405/36/8  /data/user/0/com.color.phone.flash.caller.screen/databases/sys_wrapper_settings_string_int
+         4       16             48         2/31/5  /data/user/0/com.color.phone.flash.caller.screen/databases/CounterUsage.db
+         4       48             57         6/39/5  /data/user/0/com.color.phone.flash.caller.screen/databases/ezalter.db

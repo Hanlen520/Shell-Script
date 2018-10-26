@@ -4,7 +4,6 @@ package:com.akproduction.notepad
 package:com.sohu.inputmethod.sogou
 package:org.malwarebytes.antimalware
 package:com.sony.store.china
-package:com.health.drinkwater.reminder
 package:com.hiresmusic
 package:com.tencent.mm
 package:com.sand.airdroid
@@ -14,6 +13,7 @@ package:com.mobidia.android.mdm
 package:com.sonymobile.smartoptimizer
 package:com.duapps.recorder
 package:com.tencent.mobileqq
+package:com.color.phone.flash.caller.screen
 package:com.wandoujia.phoenix2
 package:com.sonymobile.moviecreator.rmm
 package:com.sonymobile.androidapp.cameraaddon.areffect

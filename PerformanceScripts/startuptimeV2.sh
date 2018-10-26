@@ -1,9 +1,10 @@
 #!/bin/bash
 #
 # Author: Shengjie.Liu
-# Date: 2018-09-20
-# Version: 2.0
+# Date: 2018-10-25
+# Version: 2.1
 # Description: 基于mu.li的1.0版本
+# 首次安装间隔时间由5s调为10s
 
 # 获取包名和活动名
 component=$1
@@ -15,17 +16,17 @@ adb shell am force-stop $package
 adb shell pm clear $package
 # 首次安装
 starttime1=$(adb shell am start -W  $component | grep  -i Total | sed 's/ //g' | tr -d $'\r' | cut -d":" -f 2)
-sleep 5s
+sleep 10s
 adb shell am force-stop $package
 adb shell pm clear $package
 
 starttime2=$(adb shell am start -W  $component | grep  -i Total | sed 's/ //g' | tr -d $'\r' | cut -d":" -f 2)
-sleep 5s
+sleep 10s
 adb shell am force-stop $package
 adb shell pm clear $package
 
 starttime3=$(adb shell am start -W  $component | grep  -i Total | sed 's/ //g' | tr -d $'\r' | cut -d":" -f 2)
-sleep 5s
+sleep 10s
 echo "首次安装时间：$starttime1 $starttime2 $starttime3"
 echo "($starttime1+$starttime2+$starttime3)/3" | bc
 

@@ -1,0 +1,151 @@
+// CRASH: com.eyefilter.night (pid 17274)
+// Short Msg: java.lang.ArrayIndexOutOfBoundsException
+// Long Msg: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// Build Label: HUAWEI/EVA-AL10/HWEVA:7.0/HUAWEIEVA-AL10/C00B399SP17:user/release-keys
+// Build Changelist: C00B399SP17
+// Build Time: 1526398976000
+// java.lang.RuntimeException: Failure delivering result ResultInfo{who=@android:requestPermissions:, request=1, result=0, data=null} to activity {com.eyefilter.night/com.cootek.colibrow.sharekits.ShareActivity}: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4284)
+// 	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4327)
+// 	at android.app.ActivityThread.-wrap22(ActivityThread.java)
+// 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1624)
+// 	at android.os.Handler.dispatchMessage(Handler.java:105)
+// 	at android.os.Looper.loop(Looper.java:156)
+// 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+// 	at java.lang.reflect.Method.invoke(Native Method)
+// 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+// 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+// Caused by: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at com.cootek.colibrow.sharekits.ShareActivity.onRequestPermissionsResult(ShareActivity.java:296)
+// 	at android.app.Activity.dispatchRequestPermissionsResult(Activity.java:7345)
+// 	at android.app.Activity.dispatchActivityResult(Activity.java:7197)
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4280)
+// 	... 9 more
+// 
+// CRASH: com.eyefilter.night (pid 27659)
+// Short Msg: java.lang.ArrayIndexOutOfBoundsException
+// Long Msg: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// Build Label: HUAWEI/EVA-AL10/HWEVA:7.0/HUAWEIEVA-AL10/C00B399SP17:user/release-keys
+// Build Changelist: C00B399SP17
+// Build Time: 1526398976000
+// java.lang.RuntimeException: Failure delivering result ResultInfo{who=@android:requestPermissions:, request=1, result=0, data=null} to activity {com.eyefilter.night/com.cootek.colibrow.sharekits.ShareActivity}: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4284)
+// 	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4327)
+// 	at android.app.ActivityThread.-wrap22(ActivityThread.java)
+// 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1624)
+// 	at android.os.Handler.dispatchMessage(Handler.java:105)
+// 	at android.os.Looper.loop(Looper.java:156)
+// 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+// 	at java.lang.reflect.Method.invoke(Native Method)
+// 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+// 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+// Caused by: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at com.cootek.colibrow.sharekits.ShareActivity.onRequestPermissionsResult(ShareActivity.java:296)
+// 	at android.app.Activity.dispatchRequestPermissionsResult(Activity.java:7345)
+// 	at android.app.Activity.dispatchActivityResult(Activity.java:7197)
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4280)
+// 	... 9 more
+// 
+// CRASH: com.eyefilter.night (pid 28543)
+// Short Msg: java.lang.NullPointerException
+// Long Msg: java.lang.NullPointerException: Attempt to read from field 'com.google.android.gms.ads.internal.overlay.n com.google.android.gms.ads.internal.overlay.AdOverlayInfoParcel.d' on a null object reference
+// Build Label: HUAWEI/EVA-AL10/HWEVA:7.0/HUAWEIEVA-AL10/C00B399SP17:user/release-keys
+// Build Changelist: C00B399SP17
+// Build Time: 1526398976000
+// java.lang.RuntimeException: Unable to resume activity {com.eyefilter.night/com.mobutils.android.mediation.impl.admob.AdmobAdActivityBase}: java.lang.NullPointerException: Attempt to read from field 'com.google.android.gms.ads.internal.overlay.n com.google.android.gms.ads.internal.overlay.AdOverlayInfoParcel.d' on a null object reference
+// 	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3586)
+// 	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:3626)
+// 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2876)
+// 	at android.app.ActivityThread.-wrap12(ActivityThread.java)
+// 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1567)
+// 	at android.os.Handler.dispatchMessage(Handler.java:105)
+// 	at android.os.Looper.loop(Looper.java:156)
+// 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+// 	at java.lang.reflect.Method.invoke(Native Method)
+// 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+// 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+// Caused by: java.lang.NullPointerException: Attempt to read from field 'com.google.android.gms.ads.internal.overlay.n com.google.android.gms.ads.internal.overlay.AdOverlayInfoParcel.d' on a null object reference
+// 	at com.google.android.gms.ads.internal.overlay.d.e(:com.google.android.gms.dynamite_adsdynamite@14366051@14.3.66 (040408-213742215):76)
+// 	at com.google.android.gms.ads.internal.overlay.client.c.a(:com.google.android.gms.dynamite_adsdynamite@14366051@14.3.66 (040408-213742215):34)
+// 	at ob.onTransact(:com.google.android.gms.dynamite_adsdynamite@14366051@14.3.66 (040408-213742215):4)
+// 	at android.os.Binder.transact(Binder.java:499)
+// 	at com.google.android.gms.internal.ads.zzej.transactAndReadExceptionReturnVoid(Unknown Source)
+// 	at com.google.android.gms.internal.ads.zzaar.onResume(Unknown Source)
+// 	at com.google.android.gms.ads.AdActivity.onResume(Unknown Source)
+// 	at android.app.Instrumentation.callActivityOnResume(Instrumentation.java:1279)
+// 	at android.app.Activity.performResume(Activity.java:7022)
+// 	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:3561)
+// 	... 10 more
+// 
+// CRASH: com.eyefilter.night (pid 28646)
+// Short Msg: java.lang.ArrayIndexOutOfBoundsException
+// Long Msg: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// Build Label: HUAWEI/EVA-AL10/HWEVA:7.0/HUAWEIEVA-AL10/C00B399SP17:user/release-keys
+// Build Changelist: C00B399SP17
+// Build Time: 1526398976000
+// java.lang.RuntimeException: Failure delivering result ResultInfo{who=@android:requestPermissions:, request=1, result=0, data=null} to activity {com.eyefilter.night/com.cootek.colibrow.sharekits.ShareActivity}: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4284)
+// 	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4327)
+// 	at android.app.ActivityThread.-wrap22(ActivityThread.java)
+// 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1624)
+// 	at android.os.Handler.dispatchMessage(Handler.java:105)
+// 	at android.os.Looper.loop(Looper.java:156)
+// 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+// 	at java.lang.reflect.Method.invoke(Native Method)
+// 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+// 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+// Caused by: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at com.cootek.colibrow.sharekits.ShareActivity.onRequestPermissionsResult(ShareActivity.java:296)
+// 	at android.app.Activity.dispatchRequestPermissionsResult(Activity.java:7345)
+// 	at android.app.Activity.dispatchActivityResult(Activity.java:7197)
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4280)
+// 	... 9 more
+// 
+// CRASH: com.eyefilter.night (pid 31622)
+// Short Msg: java.lang.ArrayIndexOutOfBoundsException
+// Long Msg: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// Build Label: HUAWEI/EVA-AL10/HWEVA:7.0/HUAWEIEVA-AL10/C00B399SP17:user/release-keys
+// Build Changelist: C00B399SP17
+// Build Time: 1526398976000
+// java.lang.RuntimeException: Failure delivering result ResultInfo{who=@android:requestPermissions:, request=1, result=0, data=null} to activity {com.eyefilter.night/com.cootek.colibrow.sharekits.ShareActivity}: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4284)
+// 	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4327)
+// 	at android.app.ActivityThread.-wrap22(ActivityThread.java)
+// 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1624)
+// 	at android.os.Handler.dispatchMessage(Handler.java:105)
+// 	at android.os.Looper.loop(Looper.java:156)
+// 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+// 	at java.lang.reflect.Method.invoke(Native Method)
+// 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+// 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+// Caused by: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at com.cootek.colibrow.sharekits.ShareActivity.onRequestPermissionsResult(ShareActivity.java:296)
+// 	at android.app.Activity.dispatchRequestPermissionsResult(Activity.java:7345)
+// 	at android.app.Activity.dispatchActivityResult(Activity.java:7197)
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4280)
+// 	... 9 more
+// 
+// CRASH: com.eyefilter.night (pid 3696)
+// Short Msg: java.lang.ArrayIndexOutOfBoundsException
+// Long Msg: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// Build Label: HUAWEI/EVA-AL10/HWEVA:7.0/HUAWEIEVA-AL10/C00B399SP17:user/release-keys
+// Build Changelist: C00B399SP17
+// Build Time: 1526398976000
+// java.lang.RuntimeException: Failure delivering result ResultInfo{who=@android:requestPermissions:, request=1, result=0, data=null} to activity {com.eyefilter.night/com.cootek.colibrow.sharekits.ShareActivity}: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4284)
+// 	at android.app.ActivityThread.handleSendResult(ActivityThread.java:4327)
+// 	at android.app.ActivityThread.-wrap22(ActivityThread.java)
+// 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1624)
+// 	at android.os.Handler.dispatchMessage(Handler.java:105)
+// 	at android.os.Looper.loop(Looper.java:156)
+// 	at android.app.ActivityThread.main(ActivityThread.java:6523)
+// 	at java.lang.reflect.Method.invoke(Native Method)
+// 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:942)
+// 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:832)
+// Caused by: java.lang.ArrayIndexOutOfBoundsException: length=0; index=0
+// 	at com.cootek.colibrow.sharekits.ShareActivity.onRequestPermissionsResult(ShareActivity.java:296)
+// 	at android.app.Activity.dispatchRequestPermissionsResult(Activity.java:7345)
+// 	at android.app.Activity.dispatchActivityResult(Activity.java:7197)
+// 	at android.app.ActivityThread.deliverResults(ActivityThread.java:4280)
+// 	... 9 more
+// 
