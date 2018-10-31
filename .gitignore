@@ -1,0 +1,4 @@
+#macOS file
+.DS_Store
+#files
+*.txt
