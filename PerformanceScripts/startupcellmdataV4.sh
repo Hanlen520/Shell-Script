@@ -74,20 +74,20 @@ launchtime(){
 	int=2
 	while(( $int<=$1 ))
 	do
-    	adb shell am force-stop $2
-		adb shell pm clear $2
-		br=$(adb shell cat /proc/uid_stat/${3}/tcp_rcv | sed 's/ //g' | tr -d $'\r')
-		bs=$(adb shell cat /proc/uid_stat/${3}/tcp_snd | sed 's/ //g' | tr -d $'\r')
-		adb shell am start -n $4
-		sleep $5
-		ac=$(adb shell cat /proc/uid_stat/$3/tcp_rcv | sed 's/ //g' | tr -d $'\r')
-		as=$(adb shell cat /proc/uid_stat/$3/tcp_snd | sed 's/ //g' | tr -d $'\r')
-		echo $ac
-		echo $as
-    	data=`echo "($ac+$as)-($br+$bs)" | bc`
-		echo "启动消耗流量测试${int}：$data"
-		echo $data >> $6/tmp_file.txt
-    	let "int++"
+ 		adb shell am force-stop $2
+ 		adb shell pm clear $2
+ 		br=$(adb shell cat /proc/uid_stat/${3}/tcp_rcv | sed 's/ //g' | tr -d $'\r')
+ 		bs=$(adb shell cat /proc/uid_stat/${3}/tcp_snd | sed 's/ //g' | tr -d $'\r')
+ 		adb shell am start -n $4
+ 		sleep $5
+ 		ac=$(adb shell cat /proc/uid_stat/$3/tcp_rcv | sed 's/ //g' | tr -d $'\r')
+ 		as=$(adb shell cat /proc/uid_stat/$3/tcp_snd | sed 's/ //g' | tr -d $'\r')
+ 		echo $ac
+ 		echo $as
+ 		data=`echo "($ac+$as)-($br+$bs)" | bc`
+ 		echo "启动消耗流量测试${int}：$data"
+ 		echo $data >> $6/tmp_file.txt
+ 		let "int++"
 	done
 }
 
