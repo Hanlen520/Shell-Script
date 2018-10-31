@@ -1,7 +1,6 @@
 package:com.iflytek.cmcc
 package:com.sonymobile.scan3d
 package:com.akproduction.notepad
-package:com.water.drink.hydro.alarm.timer
 package:com.sohu.inputmethod.sogou
 package:org.malwarebytes.antimalware
 package:com.sony.store.china
