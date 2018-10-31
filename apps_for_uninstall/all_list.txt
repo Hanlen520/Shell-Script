@@ -42,3 +42,5 @@ com.predict.horoscope.daily.zodiac.sign
 abc.apple.emoji.theme.gif.keyboard
 walking.pedometer.fit.stepcounter
 man.fit.workout.routine.muscle.training
+com.video.live.wall.paper.background.free
+veeu.watch.funny.video.vlog.moment
