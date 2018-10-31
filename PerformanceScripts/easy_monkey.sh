@@ -31,6 +31,7 @@ OUTPUT=${WORKSPACE}/output_monkey
 
 init_data
 echo "开始时间：`date`"
+
 # adb shell monkey -p ${packagename} --ignore-crashes --ignore-timeouts --ignore-security-exceptions \
 # -s 1024 --throttle 200 -v ${extime} 1>$OUTPUT/monkey_log.txt 2>$OUTPUT/error.txt
 
