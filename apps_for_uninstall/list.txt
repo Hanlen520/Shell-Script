@@ -18,6 +18,7 @@ package:com.wandoujia.phoenix2
 package:com.flyco.tablayoutsamples
 package:com.ht.testlist
 package:com.sonymobile.moviecreator.rmm
+package:com.eyefilter.night
 package:com.sonymobile.androidapp.cameraaddon.areffect
 package:com.sonymobile.email
 package:com.drweb
