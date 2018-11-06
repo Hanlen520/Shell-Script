@@ -12,7 +12,7 @@ echo -n "Please enter the priority of log:"
 read priority
 # log命令
 adb logcat -d -v time "$package_name:$priority" > ~/Desktop/logg/$app_name$DATE.log
-# 清空日志
-adb logcat -c
 # anr日志
 adb pull /data/anr/traces.txt ~/Desktop/logg
+# 清空日志
+adb logcat -c

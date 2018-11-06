@@ -44,3 +44,4 @@ walking.pedometer.fit.stepcounter
 man.fit.workout.routine.muscle.training
 com.video.live.wall.paper.background.free
 veeu.watch.funny.video.vlog.moment
+workout.fitness.training.abs.loseweight
