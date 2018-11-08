@@ -30,7 +30,7 @@ WORKSPACE=`pwd`
 OUTPUT=${WORKSPACE}/output_monkey
 
 init_data
-echo "开始时间：`date`"
+echo "开始时间：`date "+%Y-%m-%d %H:%M:%S"`"
 
 # adb shell monkey -p ${packagename} --ignore-crashes --ignore-timeouts --ignore-security-exceptions \
 # -s 1024 --throttle 200 -v ${extime} 1>$OUTPUT/monkey_log.txt 2>$OUTPUT/error.txt
@@ -47,7 +47,7 @@ showerror(){
 crashtime=$(cat $OUTPUT/error.txt | grep "CRASH" -c)
 anrtime=$(cat $OUTPUT/error.txt | grep "ANR" -c)
 
-echo "结束时间：`date`"
+echo "结束时间：`date "+%Y-%m-%d %H:%M:%S"`"
 echo
 echo "分析结果："
 echo "------------------------------------"
