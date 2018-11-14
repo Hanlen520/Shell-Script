@@ -1,7 +1,7 @@
 # macOS file
 *.DS_Store
 
-# directory
+# 忽略目录下的所有文件
 logs/
 output/
 output_monkey/
