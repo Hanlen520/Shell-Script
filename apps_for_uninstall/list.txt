@@ -1,6 +1,7 @@
 package:com.iflytek.cmcc
 package:com.sonymobile.scan3d
 package:com.akproduction.notepad
+package:workout.fitness.training.abs.loseweight
 package:com.sohu.inputmethod.sogou
 package:org.malwarebytes.antimalware
 package:com.sony.store.china
@@ -15,7 +16,6 @@ package:com.duapps.recorder
 package:com.tencent.mobileqq
 package:com.wandoujia.phoenix2
 package:com.sonymobile.moviecreator.rmm
-package:com.eyefilter.night
 package:com.sonymobile.androidapp.cameraaddon.areffect
 package:com.sonymobile.email
 package:com.drweb
