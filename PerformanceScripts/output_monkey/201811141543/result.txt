@@ -1,2 +1,0 @@
-应用包名：com.color.phone.flash.caller.screen
-开始时间：2018-11-14 15:43:26
