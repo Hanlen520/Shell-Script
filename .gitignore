@@ -1,4 +1,16 @@
-#macOS file
+# macOS file
 *.DS_Store
-#files
-*.txt
+
+# directory
+logs/*
+output/*
+output_monkey/*
+tmp_folder/*
+
+# Python
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build

@@ -1,0 +1,13 @@
+应用包名：com.fast.messages.social.messenger.free
+开始时间：2018-11-13 18:27:30
+结束时间：2018-11-13 19:22:08
+
+分析结果：
+------------------------------------
+关键字 CRASH 共有 0 处
+关键字 ANR 共有 0 处
+
+崩溃日志：
+无
+详细执行日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811131827/monkey_log.txt
+log日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811131827/log.txt

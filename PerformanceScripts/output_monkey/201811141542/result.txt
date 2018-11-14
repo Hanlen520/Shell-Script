@@ -1,0 +1,40 @@
+应用包名：workout.fitness.training.abs.loseweight
+执行次数：
+开始时间：2018-11-14 15:42:18
+结束时间：2018-11-14 15:42:18
+
+分析结果：
+------------------------------------
+关键字 CRASH 共有 0 处
+关键字 ANR 共有 0 处
+
+崩溃日志：
+无
+详细执行日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811141542/monkey_log.txt
+log日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811141542/log.txt
+应用包名：workout.fitness.training.abs.loseweight
+开始时间：2018-11-14 15:42:22
+结束时间：2018-11-14 15:42:22
+
+分析结果：
+------------------------------------
+关键字 CRASH 共有 0 处
+关键字 ANR 共有 0 处
+
+崩溃日志：
+无
+详细执行日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811141542/monkey_log.txt
+log日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811141542/log.txt
+应用包名：workout.fitness.training.abs.loseweight
+开始时间：2018-11-14 15:42:39
+结束时间：2018-11-14 15:42:39
+
+分析结果：
+------------------------------------
+关键字 CRASH 共有 0 处
+关键字 ANR 共有 0 处
+
+崩溃日志：
+无
+详细执行日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811141542/monkey_log.txt
+log日志请查看 /Users/shengjie.liu/Shell-Script/PerformanceScripts/output_monkey/201811141542/log.txt

@@ -1,0 +1,60 @@
+--------- beginning of main
+11-19 15:42:40.676 I/appproc (23097): CLASSPATH=/system/framework/monkey.jar
+11-19 15:42:40.676 I/appproc (23097): Command=app_process /system/bin com.android.commands.monkey.Monkey -p workout.fitness.training.abs.loseweight --pct-touch 40 --pct-motion 25 --pct-appswitch 10 --pct-rotation 5 --ignore-crashes --ignore-timeouts --ignore-security-exceptions -s 1024 --throttle 200 -v 54000 
+11-19 15:42:40.676 D/AndroidRuntime(23097): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-19 15:42:40.678 I/AndroidRuntime(23097): readDownloadBoosterConfig: 'false'
+11-19 15:42:40.678 I/cutils-trace(23097): atrace_init_once, trace_marker_path = /sys/kernel/debug/tracing/trace_marker
+11-19 15:42:40.732 I/app_process(23097): Reinit property: dalvik.vm.checkjni= false
+11-19 15:42:40.736 V/HwFrameworkFactory(23097): : successes to get AllImpl object and return....
+11-19 15:42:40.741 I/HWSERVICES(23097): hwnative_get_component_register:libdrmbitmap,JNI
+11-19 15:42:40.747 I/PresentationSystem(22290): not needQuiet
+11-19 15:42:40.750 E/Zygote  (23097): register_com_android_internal_os_Zygote num = 0
+11-19 15:42:40.757 D/AndroidRuntime(23097): Calling main entry com.android.commands.monkey.Monkey
+11-19 15:42:40.757 W/Monkey  (23097): args: [-p, workout.fitness.training.abs.loseweight, --pct-touch, 40, --pct-motion, 25, --pct-appswitch, 10, --pct-rotation, 5, --ignore-crashes, --ignore-timeouts, --ignore-security-exceptions, -s, 1024, --throttle, 200, -v, 54000]
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "-p"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "workout.fitness.training.abs.loseweight"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--pct-touch"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "40"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--pct-motion"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "25"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--pct-appswitch"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "10"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--pct-rotation"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "5"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--ignore-crashes"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--ignore-timeouts"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--ignore-security-exceptions"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "-s"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "1024"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "--throttle"
+11-19 15:42:40.758 W/Monkey  (23097):  arg: "200"
+11-19 15:42:40.759 W/Monkey  (23097):  arg: "-v"
+11-19 15:42:40.759 W/Monkey  (23097):  arg: "54000"
+11-19 15:42:40.759 W/Monkey  (23097): data="workout.fitness.training.abs.loseweight"
+11-19 15:42:40.759 W/Monkey  (23097): arg="--pct-touch" mCurArgData="null" mNextArg=3 argwas="--pct-touch" nextarg="40"
+11-19 15:42:40.759 W/Monkey  (23097): data="40"
+11-19 15:42:40.759 W/Monkey  (23097): arg="--pct-motion" mCurArgData="null" mNextArg=5 argwas="--pct-motion" nextarg="25"
+11-19 15:42:40.759 W/Monkey  (23097): data="25"
+11-19 15:42:40.759 W/Monkey  (23097): arg="--pct-appswitch" mCurArgData="null" mNextArg=7 argwas="--pct-appswitch" nextarg="10"
+11-19 15:42:40.759 W/Monkey  (23097): data="10"
+11-19 15:42:40.759 W/Monkey  (23097): arg="--pct-rotation" mCurArgData="null" mNextArg=9 argwas="--pct-rotation" nextarg="5"
+11-19 15:42:40.759 W/Monkey  (23097): data="5"
+11-19 15:42:40.759 W/Monkey  (23097): arg="--ignore-crashes" mCurArgData="null" mNextArg=11 argwas="--ignore-crashes" nextarg="--ignore-timeouts"
+11-19 15:42:40.760 W/Monkey  (23097): arg="--ignore-timeouts" mCurArgData="null" mNextArg=12 argwas="--ignore-timeouts" nextarg="--ignore-security-exceptions"
+11-19 15:42:40.760 W/Monkey  (23097): arg="--ignore-security-exceptions" mCurArgData="null" mNextArg=13 argwas="--ignore-security-exceptions" nextarg="-s"
+11-19 15:42:40.760 W/Monkey  (23097): data="1024"
+11-19 15:42:40.760 W/Monkey  (23097): arg="--throttle" mCurArgData="null" mNextArg=16 argwas="--throttle" nextarg="200"
+11-19 15:42:40.760 W/Monkey  (23097): data="200"
+11-19 15:42:40.772 I/Monkey  (23097): :Monkey: seed=1024 count=54000
+11-19 15:42:40.772 I/Monkey  (23097): :AllowPackage: workout.fitness.training.abs.loseweight
+11-19 15:42:40.773 I/Monkey  (23097): :IncludeCategory: android.intent.category.LAUNCHER
+11-19 15:42:40.773 I/Monkey  (23097): :IncludeCategory: android.intent.category.MONKEY
+--------- beginning of system
+11-19 15:42:40.776 D/ActivityManager( 1165): setActivityController mControllerIsAMonkey:true callingPid:23097 callingUid:2000
+11-19 15:42:40.777 W/BroadcastQueue( 1165): Skipping deliver [background] BroadcastRecord{6b952af u-1 android.net.conn.CONNECTIVITY_CHANGE} to ReceiverList{673b6bc 23097 (unknown name)/2000/u-1 remote:23c8a89}: process gone or crashing
+11-19 15:42:40.782 I/Monkey  (23097): ** No activities found to run, monkey aborted.
+11-19 15:42:40.782 I/com.android.commands.monkey(23097): System.exit called, status: -4
+11-19 15:42:40.782 I/AndroidRuntime(23097): VM exiting with result code -4.
+11-19 15:42:40.791 I/TrafficMonitor( 1165): update:rxPkts:8,txPkts:22,rxBytes:1281,txBytes:16184
+11-19 15:42:40.791 I/TrafficMonitor( 1165): start expired. level:-1
+11-19 15:42:40.791 I/TrafficMonitor( 1165): gettimer:interval=2000

@@ -1,0 +1,24 @@
+  bash arg: -p
+  bash arg: workout.fitness.training.abs.loseweight
+  bash arg: --pct-touch
+  bash arg: 40
+  bash arg: --pct-motion
+  bash arg: 25
+  bash arg: --pct-appswitch
+  bash arg: 10
+  bash arg: --pct-rotation
+  bash arg: 5
+  bash arg: --ignore-crashes
+  bash arg: --ignore-timeouts
+  bash arg: --ignore-security-exceptions
+  bash arg: -s
+  bash arg: 1024
+  bash arg: --throttle
+  bash arg: 200
+  bash arg: -v
+  bash arg: 54000
+:Monkey: seed=1024 count=54000
+:AllowPackage: workout.fitness.training.abs.loseweight
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+** No activities found to run, monkey aborted.
