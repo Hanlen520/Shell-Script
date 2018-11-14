@@ -2,15 +2,7 @@
 *.DS_Store
 
 # directory
-logs/*
-output/*
-output_monkey/*
-tmp_folder/*
-
-# Python
-*.py[cod]
-*.so
-*.egg
-*.egg-info
-dist
-build
+logs/
+output/
+output_monkey/
+tmp_folder/
