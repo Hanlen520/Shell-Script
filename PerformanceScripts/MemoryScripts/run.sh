@@ -21,8 +21,8 @@ init_data()
 dump_memery_info()
 {
 #    echo "dump memeryinfo:"
-    echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> $MEMINFO_FILE
-    adb shell dumpsys meminfo $PACKAGE_NAME >> $MEMINFO_FILE
+    echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${1}
+    adb shell dumpsys meminfo ${2} >> ${1}
 }
 
 # 输入的分钟乘以6后赋值给TIME
@@ -42,9 +42,9 @@ dump_memery_info()
 #每隔一分钟拉取一次内存信息
 start_monitor_memory()
 {
-    for((i=1;i<=${TIME};i++));
+    for((i=1;i<=${1};i++));
     do
-        dump_memery_info
+        dump_memery_info ${2} ${3}
         sleep 60
     done
 }
@@ -53,8 +53,8 @@ start_monitor_memory()
 # 将logs/csv/t_u.csv文件复制到MEMINFO_CSV_FILE
 report_memory_info()
 {
-    sh +x memory_report.sh $MEMINFO_FILE $CURRENT_TIME
-    cp -p logs/csv/t_u.csv $MEMINFO_CSV_FILE
+    sh +x memory_report.sh ${1} ${2}
+    cp -p logs/csv/t_u.csv ${3}
 }
 
 # 运行脚本时传入的第一个参数：包名
@@ -78,10 +78,10 @@ OUTPUT_RESULT=${CURRENT_OUTPUT}/result_memory.txt
 
 init_data
 echo "`date "+%Y-%m-%d %H:%M:%S"`, start dump memoryinfo" | tee -a ${OUTPUT_RESULT}
-start_monitor_memory
+start_monitor_memory ${TIME} ${MEMINFO_FILE} ${PACKAGE_NAME}
 echo "`date "+%Y-%m-%d %H:%M:%S"`, stop dump memoryinfo" | tee -a ${OUTPUT_RESULT}
 # 内存信息记录完后，调用此方法输出报告
-report_memory_info
+report_memory_info ${MEMINFO_FILE} ${CURRENT_TIME} ${MEMINFO_CSV_FILE}
 
 echo "============================" | tee -a ${OUTPUT_RESULT}
 echo "report memory info output:" | tee -a ${OUTPUT_RESULT}
