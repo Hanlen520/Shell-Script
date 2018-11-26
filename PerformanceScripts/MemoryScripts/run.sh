@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 创建文件夹OUTPUT
 # 创建文件夹CURRENT_OUTPUT
@@ -73,16 +73,19 @@ CURRENT_OUTPUT=${OUTPUT}/${CURRENT_TIME}
 MEMINFO_FILE=${CURRENT_OUTPUT}/meminfo.txt
 # total值csv文件
 MEMINFO_CSV_FILE=${CURRENT_OUTPUT}/meminfo.csv
+# 输出结果
+OUTPUT_RESULT=${CURRENT_OUTPUT}/result_memory.txt
 
 init_data
-echo "`date "+%Y-%m-%d %H:%M:%S"`, start dump memoryinfo"
+echo "`date "+%Y-%m-%d %H:%M:%S"`, start dump memoryinfo" | tee -a ${OUTPUT_RESULT}
 start_monitor_memory
-echo "`date "+%Y-%m-%d %H:%M:%S"`, stop dump memoryinfo"
+echo "`date "+%Y-%m-%d %H:%M:%S"`, stop dump memoryinfo" | tee -a ${OUTPUT_RESULT}
 # 内存信息记录完后，调用此方法输出报告
 report_memory_info
 
-echo "============================"
-echo "report memory info output:"
-echo $MEMINFO_FILE
-echo $MEMINFO_CSV_FILE
-echo "SUCESS"
+echo "============================" | tee -a ${OUTPUT_RESULT}
+echo "report memory info output:" | tee -a ${OUTPUT_RESULT}
+echo $MEMINFO_FILE | tee -a ${OUTPUT_RESULT}
+echo $MEMINFO_CSV_FILE | tee -a ${OUTPUT_RESULT}
+echo "SUCESS" | tee -a ${OUTPUT_RESULT}
+echo "报告请查看 ${OUTPUT_RESULT}"

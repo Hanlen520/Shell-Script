@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #根据dumpsys meminfo后的文件中不同的标签， 设定文件名
 #	因为标签诸如'.ttf mmap'等， 中间有空格， 不适合直接做文件名

@@ -45,3 +45,5 @@ man.fit.workout.routine.muscle.training
 com.video.live.wall.paper.background.free
 veeu.watch.funny.video.vlog.moment
 workout.fitness.training.abs.loseweight
+dacall.overseas.free.call.wifi.pakistan
+dacall.overseas.free.call.wifi.india
