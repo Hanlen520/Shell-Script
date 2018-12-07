@@ -1,10 +1,5 @@
-package:com.amazon.mShop.android.shopping
-package:org.malwarebytes.antimalware
-package:com.example.shengjieliu.draganddraw
-package:com.instagram.android
-package:com.android.chrome
-package:com.color.phone.flash.caller.screen
-package:com.example.shengjieliu.sunset
-package:com.facebook.katana
-package:com.drweb
-package:com.taobao.taobao
+package:matrix.bbase.debug
+package:com.google.android.instantapps.supervisor
+package:com.chengcheng.FreeVPN
+package:com.tencent.mobileqq
+package:com.emoji.keyboard.touchpal

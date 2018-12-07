@@ -66,7 +66,7 @@ CURRENT_TIME=`date +%Y%m%d%H%M`
 # 绝对路径
 WORKSPACE=`pwd`
 # 输出文件夹
-OUTPUT=${WORKSPACE}/output
+OUTPUT=${WORKSPACE}/output_memory
 # 用当前时间命名的输出文件夹
 CURRENT_OUTPUT=${OUTPUT}/${CURRENT_TIME}
 # 完整内存信息文件
@@ -82,6 +82,9 @@ start_monitor_memory ${TIME} ${MEMINFO_FILE} ${PACKAGE_NAME}
 echo "`date "+%Y-%m-%d %H:%M:%S"`, stop dump memoryinfo" | tee -a ${OUTPUT_RESULT}
 # 内存信息记录完后，调用此方法输出报告
 report_memory_info ${MEMINFO_FILE} ${CURRENT_TIME} ${MEMINFO_CSV_FILE}
+
+# 内存信息取出后，删除logs文件夹节省空间
+rm -r logs
 
 echo "============================" | tee -a ${OUTPUT_RESULT}
 echo "report memory info output:" | tee -a ${OUTPUT_RESULT}
