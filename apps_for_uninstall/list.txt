@@ -1,5 +1,8 @@
-package:matrix.bbase.debug
-package:com.google.android.instantapps.supervisor
-package:com.chengcheng.FreeVPN
-package:com.tencent.mobileqq
-package:com.emoji.keyboard.touchpal
+package:org.malwarebytes.antimalware
+package:net.openvpn.openvpn
+package:com.instagram.android
+package:com.flashlight.brightest.beacon.torch
+package:com.android.chrome
+package:com.avast.android.mobilesecurity
+package:com.facebook.katana
+package:com.drweb

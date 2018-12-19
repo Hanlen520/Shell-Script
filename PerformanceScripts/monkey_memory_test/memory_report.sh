@@ -166,9 +166,11 @@ getCSVFile()
 
 # 第一列的所有参数
 MEMINFO_ARGS=("Native" "Dalvik" "Cursor" "Other dev"  "Ashmem" ".so mmap" ".jar mmap" ".apk mmap" ".ttf mmap" ".dex mmap" "Other mmap" "Unknown" "TOTAL:")
-# 从run.sh传入的两个参数
-MEMINFO_File=$1
-REPORT_TIME=$2
+# 从run.sh传入的4个参数
+MEMINFO_File=${1}
+REPORT_TIME=${2}
+MOBILE_DATA=${3}
+MOBILE_TIME=${4}
 # MEMINFO_ARGS的长度(length)
 count=${#MEMINFO_ARGS[@]}
 
@@ -204,40 +206,47 @@ do
 done
 
 # 处理完所有行，输出行数
-linecount=`awk 'END{print NR}' logs/total/Pss`
-
-#echo "Time,TOTAL,Unknown" > logs/csv/t_u.csv
-##echo $linecount
-#for ((j=1;j<=$linecount;j++));
-#do
-#	total_mem=`tail -n $j logs/total/Pss | head -n 1`
-#	time_mem=`tail -n $j logs/time | head -n 1`
-#	unknown_mem=`tail -n $j logs/unknown/Pss | head -n 1`
-#	echo "${time_mem},${total_mem},${unknown_mem}" >> logs/csv/t_u_bk.csv
-#done
-#
-#linecount=`awk 'END{print NR}' logs/csv/t_u_bk.csv`
-#for ((k=1;k<=$linecount;k++));
-#do
-#	total_line=`tail -n $k logs/csv/t_u_bk.csv | head -n 1`
-#        echo "$total_line" >> logs/csv/t_u.csv
-#done
+linecount_pss=`awk 'END{print NR}' logs/total/Pss`
 
 # 提取时间和TOTAL值，输出到t_u.csv文件
 echo "Time,TOTAL" > logs/csv/t_u.csv
-for ((j=1;j<=$linecount;j++));
+for ((j=1;j<=$linecount_pss;j++));
 do
 	total_mem=`tail -n $j logs/total/Pss | head -n 1`
 	time_mem=`tail -n $j logs/time | head -n 1`
 	echo "${time_mem},${total_mem}" >> logs/csv/t_u_bk.csv
 done
 
-linecount=`awk 'END{print NR}' logs/csv/t_u_bk.csv`
-for ((k=1;k<=$linecount;k++));
+linecount_tubk=`awk 'END{print NR}' logs/csv/t_u_bk.csv`
+for ((k=1;k<=$linecount_tubk;k++));
 do
 	total_line=`tail -n $k logs/csv/t_u_bk.csv | head -n 1`
-        echo "$total_line" >> logs/csv/t_u.csv
+    echo "$total_line" >> logs/csv/t_u.csv
+done
+
+
+# ------------流量处理--------------
+cat ${MOBILE_TIME} | while read line
+do
+	echo ${line#*:} >> logs/mobile_time
+done
+
+linecount_data=`awk 'END{print NR}' ${MOBILE_DATA}`
+
+echo "Time,Bytes" > logs/csv/mobile_data.csv
+for ((j=1;j<=${linecount_data};j++));
+do
+	total_mobile=`tail -n ${j} ${MOBILE_DATA} | head -n 1`
+	time_mobile=`tail -n ${j} logs/mobile_time | head -n 1`
+	echo "${time_mobile},${total_mobile}" >> logs/csv/mobile_data_bk.csv
+done
+
+linecount_databk=`awk 'END{print NR}' logs/csv/mobile_data_bk.csv`
+for ((k=1;k<=${linecount_databk};k++));
+do
+	total_line_mobile=`tail -n ${k} logs/csv/mobile_data_bk.csv | head -n 1`
+    echo "${total_line_mobile}" >> logs/csv/mobile_data.csv
 done
 
 #删掉*meminfo.txt, 这里已经没用了, 省的占空间. 典型的卸磨杀驴有木有...
-rm logs/*meminfo.txt
+#rm logs/*meminfo.txt
