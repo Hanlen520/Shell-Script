@@ -48,9 +48,11 @@ model=$(adb shell getprop ro.product.model | sed 's/ //g' | tr -d $'\r')
 release=$(adb shell getprop ro.build.version.release | sed 's/ //g' | tr -d $'\r')
 
 # 屏幕分辨率/密度
-size=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $1}' | cut -d"=" -f 2`
-density=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $2}'`
-display=${size}/${density}
+#size=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $1}' | cut -d"=" -f 2`
+#density=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $2}'`
+density=$(adb shell wm density | tr -d $'\r' | awk '{print $3}')
+size=$(adb shell wm size | tr -d $'\r' | awk '{print $3}')
+display="${size}/${density}dpi"
 
 echo "手机型号：${brand} ${model} ${release} ${display}" | tee -a ${OUTPUT_RESULT}
 
