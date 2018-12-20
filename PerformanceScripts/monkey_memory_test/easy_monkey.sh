@@ -105,6 +105,10 @@ done
 # press home key to avoid back key didn't take effect
 adb shell input keyevent 3
 
+# log命令
+adb logcat -d -v time "${packagename}:V" > ${CURRENT_OUTPUT}/log.txt
+adb logcat -d -v time > ${CURRENT_OUTPUT}all_log.txt
+
 echo "正在获取CPU使用率..."
 
 # monkey跑完后的3、5、10分钟各取一次cpu值，超过40%可到内存脚本的输出文件夹里查看cpuinfo.txt文件以排查问题
@@ -167,9 +171,6 @@ showmonkeylogcrash(){
     cat ${CURRENT_OUTPUT}/monkey_log.txt | grep "CRASH" | tee -a ${OUTPUT_RESULT}
 }
 monkeylogcrashtime=$(cat ${CURRENT_OUTPUT}/monkey_log.txt | grep "CRASH" -c)
-
-# log命令
-adb logcat -d -v time "${packagename}:V" > ${CURRENT_OUTPUT}/log.txt
 
 showfatal(){
     cat ${CURRENT_OUTPUT}/log.txt | grep "FATAL" | tee -a ${OUTPUT_RESULT}
