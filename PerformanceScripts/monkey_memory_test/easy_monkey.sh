@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: Shengjie.Liu
-# Date: 2018-12-17
-# Version: 2.0
+# Date: 2018-12-24
+# Version: 2.1
 # Description: script of monkey
 # How to use: sh +x easy_monkey.sh <packagename> <extime>
 
@@ -22,19 +22,71 @@ init_data(){
     touch ${CPUINFO_BK_CSV}
 }
 
+# process id
+function getPid() {
+    adb shell ps | grep ${1} | tr -d $'\r' | awk '{print $2}' | head -n 1
+}
+
+# cpu kernel
+function getCpuKer() {
+    adb shell cat /proc/cpuinfo | grep "processor" > ${TEMP_FILE}/processor_count
+    cpu_ker_count=`awk 'END{print NR}' ${TEMP_FILE}/processor_count`
+    echo ${cpu_ker_count}
+}
+
+# process cpu time
+function processCpuTime() {
+    adb shell cat /proc/${1}/stat > ${TEMP_FILE}/process_cpu_time
+    utime=$(cat ${TEMP_FILE}/process_cpu_time | awk '{print $14}')
+    stime=$(cat ${TEMP_FILE}/process_cpu_time | awk '{print $15}')
+    cutime=$(cat ${TEMP_FILE}/process_cpu_time | awk '{print $16}')
+    cstime=$(cat ${TEMP_FILE}/process_cpu_time | awk '{print $17}')
+    result=`expr ${utime} + ${stime} + ${cutime} + ${cstime}`
+    echo ${result}
+}
+
+# total cpu time
+function totalCpuTime() {
+    adb shell cat /proc/stat > ${TEMP_FILE}/total_cpu_time
+    cat ${TEMP_FILE}/total_cpu_time | grep "cpu" | head -n 1 > ${TEMP_FILE}/total_cpu
+    user=$(cat ${TEMP_FILE}/total_cpu | awk '{print $2}')
+    nice=$(cat ${TEMP_FILE}/total_cpu | awk '{print $3}')
+    system=$(cat ${TEMP_FILE}/total_cpu | awk '{print $4}')
+    idle=$(cat ${TEMP_FILE}/total_cpu | awk '{print $5}')
+    iowait=$(cat ${TEMP_FILE}/total_cpu | awk '{print $6}')
+    irq=$(cat ${TEMP_FILE}/total_cpu | awk '{print $7}')
+    softirq=$(cat ${TEMP_FILE}/total_cpu | awk '{print $8}')
+    result=`expr ${user} + ${nice} + ${system} + ${idle} + ${iowait} + ${irq} + ${softirq}`
+    echo ${result}
+}
+
+# cpu usage rate
+function getCpuRate() {
+    process_cpu_time1=`processCpuTime ${1}`
+    total_cpu_time1=`totalCpuTime`
+    sleep 1s
+    process_cpu_time2=`processCpuTime ${1}`
+    total_cpu_time2=`totalCpuTime`
+    process_cpu_time3=$(( ${process_cpu_time2} - ${process_cpu_time1} ))
+    total_cpu_time3=$(( ${total_cpu_time2} - ${total_cpu_time1} ))
+    cpu_rate=$(bc <<< "scale=3;(${process_cpu_time3}/${total_cpu_time3})*${2}*100")
+    result=$(echo "scale=0;${cpu_rate}/1" | bc -l)
+    echo ${result}
+}
+
 WORKSPACE=`pwd`
 OUTPUT=${WORKSPACE}/output_monkey
 CURRENT_TIME=`date +%Y%m%d%H%M`
-# 输出文件夹
+# output directory
 CURRENT_OUTPUT=${OUTPUT}/${CURRENT_TIME}
-# monkey报告
+# monkey report
 OUTPUT_RESULT=${CURRENT_OUTPUT}/result_monkey.txt
-# 临时文件夹
+# temporary folder
 TEMP_FILE=${CURRENT_OUTPUT}/temp
-# CPU文件
+# CPU file
 CPUINFO_FILE=${TEMP_FILE}/cpuinfo.txt
 CPUTIME_FILE=${TEMP_FILE}/cputime.txt
-# csv文件
+# CSV file
 CPUINFO_CSV=${CURRENT_OUTPUT}/cpuinfo.csv
 CPUINFO_BK_CSV=${TEMP_FILE}/cpuinfo_bk.csv
 
@@ -42,17 +94,22 @@ init_data
 # clear log
 adb logcat -c
 
-# 手机型号（品牌/型号/系统版本）
+# phone info(brand/model/system version)
 brand=$(adb shell getprop ro.product.brand | sed 's/ //g' | tr -d $'\r')
 model=$(adb shell getprop ro.product.model | sed 's/ //g' | tr -d $'\r')
 release=$(adb shell getprop ro.build.version.release | sed 's/ //g' | tr -d $'\r')
+release_one=$(echo ${release} | awk -F. '{print $1}')
 
-# 屏幕分辨率/密度
-#size=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $1}' | cut -d"=" -f 2`
-#density=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $2}'`
-density=$(adb shell wm density | tr -d $'\r' | awk '{print $3}')
-size=$(adb shell wm size | tr -d $'\r' | awk '{print $3}')
-display="${size}/${density}dpi"
+# screen resolution/density
+if [[ ${release_one} > 4 ]]; then
+	density=$(adb shell wm density | tr -d $'\r' | awk '{print $3}')
+	size=$(adb shell wm size | tr -d $'\r' | awk '{print $3}')
+	display="${size}/${density}dpi"
+else
+	size=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $1}' | cut -d"=" -f 2`
+	density=`adb shell dumpsys window displays | grep "init" | tr -d $'\r' | awk '{print $2}'`
+	display="${size}/${density}"
+fi
 
 echo "手机型号：${brand} ${model} ${release} ${display}" | tee -a ${OUTPUT_RESULT}
 
@@ -93,7 +150,7 @@ adb shell monkey -p ${packagename} --pct-touch 40 --pct-motion 25 --pct-appswitc
 echo "结束时间：`date "+%Y-%m-%d %H:%M:%S"`" | tee -a ${OUTPUT_RESULT}
 
 sleep 5s
-# screenshot after the monkey done
+# screen shot after the monkey done
 adb exec-out screencap -p > ${CURRENT_OUTPUT}/end.png
 
 # quit this app, back to home
@@ -102,34 +159,42 @@ while (( ${count}<=10 )); do
     adb shell input keyevent 4
     let "count++"
 done
-# press home key to avoid back key didn't take effect
+# press home key in case of back key that didn't work
 adb shell input keyevent 3
 
-# log命令
+# log command
 adb logcat -d -v time "${packagename}:V" > ${CURRENT_OUTPUT}/log.txt
 adb logcat -d -v time > ${CURRENT_OUTPUT}all_log.txt
 
 echo "正在获取CPU使用率..."
 
 # monkey跑完后的3、5、10分钟各取一次cpu值，超过40%可到内存脚本的输出文件夹里查看cpuinfo.txt文件以排查问题
-# dump cpuinfo
+# process id
+pid=`getPid ${packagename}`
+# cpu kernel
+cpu_ker=`getCpuKer`
+# start dump cpn info
 echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-cpuinfo=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+#cpuinfo=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+cpuinfo=`getCpuRate ${pid} ${cpu_ker}`
 echo ${cpuinfo} >> ${CPUINFO_FILE}
 # after 3minutes
 sleep 180s
 echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-cpuinfo3=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+#cpuinfo3=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+cpuinfo3=`getCpuRate ${pid} ${cpu_ker}`
 echo ${cpuinfo3} >> ${CPUINFO_FILE}
 # after 5minutes
 sleep 120s
 echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-cpuinfo5=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+#cpuinfo5=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+cpuinfo5=`getCpuRate ${pid} ${cpu_ker}`
 echo ${cpuinfo5} >> ${CPUINFO_FILE}
 # after 10minutes
 sleep 300s
 echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-cpuinfo10=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+#cpuinfo10=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
+cpuinfo10=`getCpuRate ${pid} ${cpu_ker}`
 echo ${cpuinfo10} >> ${CPUINFO_FILE}
 
 echo "CPU走势：${cpuinfo}%（monkey结束时）-> ${cpuinfo3}%（3分钟后）-> ${cpuinfo5}%（5分钟后）-> ${cpuinfo10}%（10分钟后）" \
@@ -157,7 +222,7 @@ do
     echo "${total_line}" >> ${CPUINFO_CSV}
 done
 
-# 删除临时文件夹
+# delete temporary folder
 rm -r ${TEMP_FILE}
 
 showerror(){
