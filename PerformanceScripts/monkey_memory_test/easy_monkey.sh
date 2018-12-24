@@ -164,7 +164,7 @@ adb shell input keyevent 3
 
 # log command
 adb logcat -d -v time "${packagename}:V" > ${CURRENT_OUTPUT}/log.txt
-adb logcat -d -v time > ${CURRENT_OUTPUT}all_log.txt
+adb logcat -d -v time > ${CURRENT_OUTPUT}/all_log.txt
 
 echo "正在获取CPU使用率..."
 
