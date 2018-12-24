@@ -1,8 +1,2 @@
-package:org.malwarebytes.antimalware
-package:net.openvpn.openvpn
-package:com.instagram.android
-package:com.flashlight.brightest.beacon.torch
-package:com.android.chrome
-package:com.avast.android.mobilesecurity
-package:com.facebook.katana
-package:com.drweb
+package:com.cootek.smartinputv5
+package:com.cootek.test

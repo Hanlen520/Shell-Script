@@ -100,7 +100,7 @@ else
 	datasum=$(cat $OUTPUT/tmp_file.txt | awk '{sum+=$1} END {print sum}')
 	dataall=`echo "$datasum+$data1" | bc`
 	average=`echo "$dataall/$times" | bc`
-	# 删除临时文件
-	rm -r $OUTPUT/tmp_file.txt
+	# 删除临时文件夹
+	rm -r $OUTPUT
 	echo "应用启动时流量消耗（取${times}次测试平均值）：$average bytes"
 fi
