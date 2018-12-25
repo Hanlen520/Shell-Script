@@ -47,7 +47,7 @@ getMemFileName()
 	*)
 			;;
 	esac
-	
+
 	echo ${fileName}
 }
 
@@ -72,7 +72,7 @@ removeTag()
 {
 	local fileName=$1
 	local tag=$2
-	
+
 	case $tag in
 		"Native")
 		awk '{$1="";print}' ${fileName} > logs/native.txt
@@ -156,12 +156,11 @@ getCSVFile()
 			echo ${csvline} >> logs/csv/${item}.csv
 			sed -i '' "s/,//g" logs/csv/${item}.csv
 		done
-	done 
+	done
 }
 
 MEMINFO_ARGS=("Native" "Dalvik" "Cursor" "Other dev"  "Ashmem" ".so mmap" ".jar mmap" ".apk mmap" ".ttf mmap" ".dex mmap" "Other mmap" "Unknown" "TOTAL")
 MEMINFO_File=$1
-REPORT_TIME=$2
 count=${#MEMINFO_ARGS[@]}
 
 #如果当期路径有logs/, 删掉, 避免数据混淆
@@ -188,7 +187,7 @@ grep 'TIME FLAG:' $MEMINFO_File > logs/logtime
 
 cat logs/logtime | while read line
 do
-	echo ${line#*:} >> logs/time	
+	echo ${line#*:} >> logs/time
 done
 
 linecount=`awk 'END{print NR}' logs/total/Pss`
