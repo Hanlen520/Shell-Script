@@ -18,7 +18,8 @@ report_memory_info()
 MEMINFO=$1
 CURRENT_TIME=`date +%Y%m%d%H%M`
 WORKSPACE=`pwd`
-CURRENT_OUTPUT=${WORKSPACE}/${CURRENT_TIME}
+OUTPUT=${WORKSPACE}/output_csv
+CURRENT_OUTPUT=${OUTPUT}/${CURRENT_TIME}
 REPORT=${CURRENT_OUTPUT}/meminfo.csv
 
 init_data
