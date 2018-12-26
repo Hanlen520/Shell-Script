@@ -27,7 +27,7 @@ function getStartupTime() {
 # parameter: package_name
 function clearApp() {
   adb shell am force-stop ${1}
-  adb shell pm clear ${1}
+#  adb shell pm clear ${1}
   sleep 10s
 }
 

@@ -47,3 +47,5 @@ veeu.watch.funny.video.vlog.moment
 workout.fitness.training.abs.loseweight
 dacall.overseas.free.call.wifi.pakistan
 dacall.overseas.free.call.wifi.india
+com.qrcorde.scan.barcode.reader.generator
+
