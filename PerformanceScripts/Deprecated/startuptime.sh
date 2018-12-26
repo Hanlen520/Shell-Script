@@ -4,7 +4,7 @@
 # Date:2018-07-06
 # Version: 1.0
 # Description:
-
+# Deprecated 12/26 2018
 
 component=$1
 package=$(echo $1 | cut -d"/" -f1) 

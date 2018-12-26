@@ -1,2 +1,2 @@
-package:com.cootek.smartinputv5
-package:com.cootek.test
+package:com.selfie.camera.beauty.makeup
+package:com.eyefilter.night

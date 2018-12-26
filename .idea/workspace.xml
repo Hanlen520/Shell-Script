@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8c497a36-852c-4cdb-830a-d797fb639106" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/easy_monkey.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/easy_monkey.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceScripts/startupcellmdataV4.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceScripts/startupcellmdataV4.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerformanceScripts/startuptime.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceScripts/Deprecated/startuptime.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PerformanceScripts/startuptimeV2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceScripts/Deprecated/startuptimeV2.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps_for_uninstall/list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apps_for_uninstall/list.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,30 +17,31 @@
     <session id="2033147067">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="sh" value="12" />
+          <entry key="sh" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="12" />
+          <entry key="Bash" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="sh" value="832" />
+          <entry key="sh" value="1349" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="832" />
+          <entry key="Bash" value="1349" />
         </counts>
       </usages-collector>
     </session>
@@ -48,28 +49,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/easy_monkey.sh">
+        <entry file="file://$PROJECT_DIR$/PerformanceScripts/startuptime.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/run.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1229">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/memory_report.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="200" column="44" selection-start-line="200" selection-start-column="44" selection-end-line="200" selection-end-column="44" />
+            <state relative-caret-position="383">
+              <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -93,6 +76,10 @@
       <list>
         <option value="$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/run.sh" />
         <option value="$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/easy_monkey.sh" />
+        <option value="$PROJECT_DIR$/PerformanceScripts/getMemCsv/run.sh" />
+        <option value="$PROJECT_DIR$/PerformanceScripts/startuptimeV2.sh" />
+        <option value="$PROJECT_DIR$/PerformanceScripts/Deprecated/startuptime.sh" />
+        <option value="$USER_HOME$/Downloads/startuptime.sh" />
       </list>
     </option>
   </component>
@@ -108,6 +95,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,21 +108,19 @@
               <item name="Shell-Script" type="462c0819:PsiDirectoryNode" />
               <item name="PerformanceScripts" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Shell-Script" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shell-Script" type="462c0819:PsiDirectoryNode" />
-              <item name="PerformanceScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="monkey_memory_test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PerformanceScripts/Deprecated" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,15 +177,17 @@
     <entry file="file://$PROJECT_DIR$/PerformanceScripts/firstinstalllaunchtime.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerformanceScripts/startuptimeV2.sh">
+    <entry file="file://$PROJECT_DIR$/PerformanceScripts/getMemCsv/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32" />
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/run.sh">
+    <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/easy_monkey.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1229">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        <state relative-caret-position="361">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -210,10 +198,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/easy_monkey.sh">
+    <entry file="file://$PROJECT_DIR$/PerformanceScripts/monkey_memory_test/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="337">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerformanceScripts/Deprecated/startuptime.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerformanceScripts/Deprecated/startuptimeV2.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/startuptime.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerformanceScripts/startuptime.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
         </state>
       </provider>
     </entry>
