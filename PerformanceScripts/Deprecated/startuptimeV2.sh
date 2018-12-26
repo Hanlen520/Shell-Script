@@ -5,6 +5,7 @@
 # Version: 2.1
 # Description: 基于mu.li的1.0版本
 # 首次安装间隔时间由5s调为10s
+# Deprecated 12/26 2018
 
 # 获取包名和活动名
 component=$1
