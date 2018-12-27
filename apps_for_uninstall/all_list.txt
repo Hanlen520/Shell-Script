@@ -48,4 +48,6 @@ workout.fitness.training.abs.loseweight
 dacall.overseas.free.call.wifi.pakistan
 dacall.overseas.free.call.wifi.india
 com.qrcorde.scan.barcode.reader.generator
+com.simple.stylish.quick.digit.calculator
+matrix.bbase.debug
 
