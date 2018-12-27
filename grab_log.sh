@@ -13,6 +13,7 @@ echo -n "Please enter the priority of log:"
 read priority
 # log命令
 adb logcat -d -v time "${tag}:${priority}" > ~/Desktop/logg/${tag}${DATE}.log
+adb logcat -d -v time > ~/Desktop/logg/${tag}${DATE}_all.log
 # anr日志
 adb pull /data/anr/traces.txt ~/Desktop/logg
 # 清空日志
