@@ -1,1 +1,14 @@
-package:com.color.phone.flash.caller.screen
+package:abs.workout.fitness.tabata.hiit.stomach
+package:com.emoji.keyboard.touchpal.oem
+package:com.qrcorde.scan.barcode.reader.generator
+package:com.simple.stylish.quick.digit.calculator
+package:com.health.drinkwater.reminder
+package:com.astrill.astrillvpn
+package:matrix.bbase.debug
+package:com.ninexgen.explorer
+package:com.google.android.instantapps.supervisor
+package:com.chengcheng.FreeVPN
+package:com.color.call.flash.colorphone
+package:com.tencent.mobileqq
+package:com.facebook.katana
+package:com.smartisanos.smartfolder.aoa
