@@ -1,9 +1,2 @@
-package:com.color.call.flash.colorphone.theme.coolled
-package:com.color.call.flash.colorphone.theme.rotatingaperture
-package:com.color.call.flash.colorphone.theme.colorfulpapers
-package:matrix.bbase.debug
-package:com.color.call.flash.colorphone
-package:com.color.call.flash.colorphone.theme.shimmering
-package:com.color.call.flash.colorphone.theme.roselove
+package:com.eyefilter.night
 package:com.smartisanos.smartfolder.aoa
-package:com.color.call.flash.colorphone.theme.cupidarrow

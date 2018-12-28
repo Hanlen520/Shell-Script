@@ -15,6 +15,6 @@ read priority
 adb logcat -d -v time "${tag}:${priority}" > ~/Desktop/logg/${tag}${DATE}.log
 adb logcat -d -v time > ~/Desktop/logg/${tag}${DATE}_all.log
 # anr日志
-adb pull /data/anr/traces.txt ~/Desktop/logg
+adb pull /data/anr/traces.txt ~/Desktop/logg/
 # 清空日志
 adb logcat -c
