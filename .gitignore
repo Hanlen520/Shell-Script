@@ -10,6 +10,7 @@ output_memory/
 output_csv/
 
 apps_for_uninstall/list.txt
+.idea/
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
