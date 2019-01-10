@@ -50,4 +50,7 @@ dacall.overseas.free.call.wifi.india
 com.qrcorde.scan.barcode.reader.generator
 com.simple.stylish.quick.digit.calculator
 matrix.bbase.debug
-
+com.sleepsounds.bedtime.relax.mediation
+man.workout.abs.fitness.loseweight
+com.messenger.socialmedia.allinone.lite
+com.horoscope.astrology.crystalball.predict
