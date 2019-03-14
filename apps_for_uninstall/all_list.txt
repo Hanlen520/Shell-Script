@@ -57,3 +57,4 @@ com.horoscope.astrology.crystalball.predict
 com.home.workout.health.fit.abs
 com.my.internet.radiosonline.freemusic.fm
 com.internet.popular.podcast.free
+step.tracker.pedometer.stepcounter
