@@ -54,7 +54,7 @@ else
     echo "PackageName&ActivityName: ${component}"
 fi
 
-echo "start launch time test..."
+echo "Starting launch time test..."
 
 # first installation time
 install ${apk_address}
