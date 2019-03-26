@@ -102,4 +102,4 @@ echo "冷启动时间（ms）：$starttime1 $starttime2 $starttime3"
 echo "($starttime1+$starttime2+$starttime3)/3" | bc
 
 # back to zero
-uninstall ${package_name}
+# uninstall ${package_name}
