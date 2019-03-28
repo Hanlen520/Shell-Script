@@ -58,3 +58,4 @@ com.home.workout.health.fit.abs
 com.my.internet.radiosonline.freemusic.fm
 com.internet.popular.podcast.free
 step.tracker.pedometer.stepcounter
+com.babycare.grow.feeding.pregnancy.tracker
