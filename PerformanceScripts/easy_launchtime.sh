@@ -39,6 +39,12 @@ function quitApp() {
   sleep 2s
 }
 
+# click "OK" when installed application showing permission dialog
+function clickOk() {
+  sleep 2s
+  adb shell input tap 973 1713
+}
+
 read -p "请输入APK地址：" apk_address
 
 # get packageName and acvitiyName via aapt
@@ -58,14 +64,17 @@ echo "Starting launch time test..."
 
 # first installation time
 install ${apk_address}
+clickOk
 starttime1=`getStartupTime ${component}`
 uninstall ${package_name}
 
 install ${apk_address}
+clickOk
 starttime2=`getStartupTime ${component}`
 uninstall ${package_name}
 
 install ${apk_address}
+clickOk
 starttime3=`getStartupTime ${component}`
 sleep 20s
 
