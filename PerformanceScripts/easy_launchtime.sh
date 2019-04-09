@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Author: Shengjie.Liu
-# Date: 2018-12-26
-# Version: 3.1
+# Date: 2019-04-09
+# Version: 3.2
 # Description: 启动时间脚本
 # How to use: run script and follow the instruction that print in the terminal.
-# changelog: add aapt to parse apk info
+# changelog: 专项适配sony8.0手机
 
 # parameter: apk_address
 function install() {
