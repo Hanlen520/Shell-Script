@@ -60,3 +60,4 @@ com.internet.popular.podcast.free
 step.tracker.pedometer.stepcounter
 com.babycare.grow.feeding.pregnancy.tracker
 com.show.truecaller.slide.free.screenoncall
+com.call.flash.color.phone
