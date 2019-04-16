@@ -1,5 +1,8 @@
 # macOS file
 *.DS_Store
+# useless file
+permission_new.txt
+permission_old.txt
 
 # 忽略目录下的所有文件
 logs/
