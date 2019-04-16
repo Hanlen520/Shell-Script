@@ -10,7 +10,7 @@ if [[ -f permission_old.txt ]]; then
     rm permission_old.txt permission_new.txt
 fi
 
-#读取旧版本apk文件地址
+#读取apk文件地址
 read -p "请输入上个版本apk文件存放地址：" apk_old
 read -p "请输入最新版本apk文件存放地址：" apk_new
 
