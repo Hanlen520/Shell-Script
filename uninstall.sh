@@ -1,4 +1,9 @@
 #!/bin/bash
+# Author: Shengjie.Liu
+# Date: 2019-04-19
+# Version: 1.0
+# Description: 批量卸载安卓应用
+# How to use: sh +x uninstall.sh
 
 WORkSPACE=`pwd`
 
