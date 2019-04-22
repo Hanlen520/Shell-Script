@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Author: Shengjie.Liu
-# Date: 2019-04-15
-# Version: 1.0
-# Description: 权限检查
+# Date: 2019-04-22
+# Version: 1.1
+# Description: 权限检查+apk size对比
 # How to use: sh +x permission_check.sh
 
 #清空上次运行后产生的文件
