@@ -64,5 +64,6 @@ else
 fi
 
 #输出apk size
+echo "------"
 echo "上个版本apk size: ${m_size_old}MB"
 echo "最新版本apk size: ${m_size_new}MB"
