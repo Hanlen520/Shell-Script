@@ -65,5 +65,13 @@ fi
 
 #输出apk size
 echo "------"
-echo "上个版本apk size: ${m_size_old}MB"
-echo "最新版本apk size: ${m_size_new}MB"
+echo "上个版本apk size: ${m_size_old}MB(${k_size_old}KB)"
+echo "最新版本apk size: ${m_size_new}MB(${k_size_new}KB)"
+#对比两个版本的apk size大小变化
+if [[ `echo "${m_size_new} > ${m_size_old}" | bc` -eq 1 ]]
+then
+exceeded_size=$(printf "%.2f" `echo "scale=2;${m_size_new}-${m_size_old}"|bc`)
+echo "最新版本比上个版本增加${exceeded_size}MB"
+else
+echo "apk size未增加"
+fi
