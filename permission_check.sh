@@ -14,6 +14,13 @@ fi
 read -p "请输入上个版本apk文件存放地址：" apk_old
 read -p "请输入最新版本apk文件存放地址：" apk_new
 
+#检查apk size
+k_size_old=`ls -s -k ${apk_old} | awk '{print $1}'`
+m_size_old=`awk 'BEGIN{printf "%.2f\n", "'${k_size_old}'"/'1024'}'`
+
+k_size_new=`ls -s -k ${apk_new} | awk '{print $1}'`
+m_size_new=`awk 'BEGIN{printf "%.2f\n", "'${k_size_new}'"/'1024'}'`
+
 #aapt命令解析apk,输出权限到文件
 aapt d badging ${apk_old} | grep "uses-permission:" | awk -F "'" '{print $2}' > permission_old.txt
 aapt d badging ${apk_new} | grep "uses-permission:" | awk -F "'" '{print $2}' > permission_new.txt
@@ -55,3 +62,7 @@ else
     #删除新减少权限文件
     rm permission_decrease.txt
 fi
+
+#输出apk size
+echo "上个版本apk size: ${m_size_old}MB"
+echo "最新版本apk size: ${m_size_new}MB"
