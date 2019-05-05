@@ -15,10 +15,12 @@ read -p "请输入上个版本apk文件存放地址：" apk_old
 read -p "请输入最新版本apk文件存放地址：" apk_new
 
 #检查apk size
-k_size_old=`ls -s -k ${apk_old} | awk '{print $1}'`
+b_size_old=`ls -l ${apk_old} | awk '{print $5}'`
+k_size_old=`awk 'BEGIN{printf "%.2f\n", "'${b_size_old}'"/'1024'}'`
 m_size_old=`awk 'BEGIN{printf "%.2f\n", "'${k_size_old}'"/'1024'}'`
 
-k_size_new=`ls -s -k ${apk_new} | awk '{print $1}'`
+b_size_new=`ls -l ${apk_new} | awk '{print $5}'`
+k_size_new=`awk 'BEGIN{printf "%.2f\n", "'${b_size_new}'"/'1024'}'`
 m_size_new=`awk 'BEGIN{printf "%.2f\n", "'${k_size_new}'"/'1024'}'`
 
 #aapt命令解析apk,输出权限到文件
