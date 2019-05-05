@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Author: Shengjie.Liu
-# Date: 2019-04-22
-# Version: 1.1
+# Date: 2019-05-05
+# Version: 1.2
 # Description: 权限检查+apk size对比
 # How to use: sh +x permission_check.sh
 
