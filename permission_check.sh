@@ -77,3 +77,7 @@ echo "最新版本比上个版本增加${exceeded_size}MB"
 else
 echo "apk size未增加"
 fi
+
+#删除文件
+rm permission_old.txt permission_new.txt
+
