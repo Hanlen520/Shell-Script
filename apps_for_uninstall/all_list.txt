@@ -65,3 +65,4 @@ com.videodownloader.saver.manager.videocache
 com.live.radio.pop.music.fm.free
 fitness.abs.bodybuilding.workout.home
 com.music.player.tool.android.equalizer
+com.mobutils.android.tark.tark_scene
