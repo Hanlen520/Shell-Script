@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Author: ScottLee
+# Date:2018-09-02
+# Version: 1.0
+# Description:
+
+rdevice=`achooosedevice`
+if [ $? -eq 1 ]
+then
+    echo "$rdevice"
+    exit 1
+fi
+adb -s $rdevice shell settings delete global http_proxy
+adb -s $rdevice shell settings delete global global_http_proxy_host
+adb -s $rdevice shell settings delete global global_http_proxy_port
+adb -s $rdevice shell reboot
+

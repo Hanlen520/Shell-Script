@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Author: ScottLee
+# Date:2018-09-02
+# Version: 1.0
+# Description:
+
+rdevice=`achooosedevice`
+if [ $? -eq 1 ]
+then
+    echo "$rdevice"
+    exit 1
+fi
+ip=$(showip)
+echo "set proxy to $ip:8888"
+adb -s $rdevice  shell settings put global http_proxy $ip:8888

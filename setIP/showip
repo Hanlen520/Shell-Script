@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ifconfig | grep ".*inet.*bro.*" | sed 's/  */ /g' | cut -d' ' -f2

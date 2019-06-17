@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# Author: ScottLee
+# Date:2018-10-31
+# Version: 1.0
+# Description:
+
+devices=$(adb devices)
+
+#add device to list named rdevices(real devices)
+BAK_IFS=$IFS
+IFS=$'\n'
+index=-1
+for device in $devices
+do
+    if [[ $device =~ 'List of devices' ]]
+    then
+       echo -n '' 
+    else
+       index=$[index+1]
+       rdevices[$index]=$device 
+    fi
+done
+
+
+# devices count
+dcount=$[index+1]
+if [ $dcount -eq 1 ]
+then
+    echo `echo "${rdevices[0]}" | cut -f 1`
+    exit 0
+elif [ $dcount -lt 1 ]
+then
+    echo  "No device attach"
+    exit 1
+fi
+
+echo "Find more than 1 devices, choose the device:" >&2
+select device in ${rdevices[@]}
+do
+    echo `echo $device | cut -f 1`    
+    exit 0
+done
+
+IFS=$BAK_IFS
